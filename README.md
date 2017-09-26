@@ -1,0 +1,1 @@
+# Resonar Child Theme
