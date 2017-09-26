@@ -10,7 +10,7 @@
 ?>
 		<?php get_sidebar(); ?>
 
-	</div><!-- .site-content -->
+	</div><!-- .site-content  -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 <!-- 			Footer Copyright -->
