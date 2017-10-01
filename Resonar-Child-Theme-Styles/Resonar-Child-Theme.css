@@ -1,0 +1,29 @@
+/* !Members Page */
+
+.flex-grid-half  h2 {
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+
+.flex-grid-half {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-grid-half .flex-col {
+  width: 50%;
+  margin: 0px 10px;
+}
+
+@media (max-width: 600px) {
+	
+  .flex-grid-half, .flex-col  {
+    display: block;
+    margin: 10px;
+  }
+  
+  .flex-grid-half .flex-col {
+  width: 100%;
+  }
+  
+}
