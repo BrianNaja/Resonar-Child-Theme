@@ -1,4 +1,5 @@
-<?php /* Template Name: Videos */ ?>
+<?php /* Template Name: Member Videos */ ?>
+
  
 <?get_header(); ?>
 
@@ -7,15 +8,22 @@
 		<main id="main" class="site-main" role="main">
 
 		<?php
+			
+			 if( ! is_user_logged_in() ) {
+			 	wp_redirect( 'https://www.addspice.net/members/' );
+			 	exit;
+			 } 
+			 
 			// Define custom query parameters
 			$temp = $wp_query; 
 			$wp_query = null; 
 			$wp_query = new WP_Query(); 
-			$wp_query->query('showposts=3&post_type=videos'.'&paged='.$paged); 
+			$wp_query->query('showposts=3&post_type=Member Videos'.'&paged='.$paged); 
 			
 			while ($wp_query->have_posts()) : $wp_query->the_post(); 
 			
-			get_template_part( 'content-page');
+			get_template_part( 'content', get_post_format() );
+			
 			 		
 			endwhile;
 			
