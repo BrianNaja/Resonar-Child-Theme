@@ -1,6 +1,4 @@
-<?php 
-	
-// Custom post type function
+<?php // Custom post type function
 
 add_action( 'init', 'member_videos' );
 

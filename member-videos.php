@@ -1,18 +1,15 @@
 <?php /* Template Name: Member Videos */ ?>
-
- 
-<?get_header(); ?>
+<?php if( ! is_user_logged_in() ) {
+			 	wp_redirect( 'https://www.addspice.net/members/' );
+			 	exit;
+			 } ?>
+<?php get_header(); ?>
 
 	<div id="primary" class="content-area">
 
 		<main id="main" class="site-main" role="main">
-
 		<?php
 			
-			 if( ! is_user_logged_in() ) {
-			 	wp_redirect( 'https://www.addspice.net/members/' );
-			 	exit;
-			 } 
 			 
 			// Define custom query parameters
 			$temp = $wp_query; 
@@ -41,6 +38,7 @@
 			// Reset main query object
 			$wp_query = NULL;
 			$wp_query = $temp;
+			
 		?>
 
 		</main><!-- .site-main -->
