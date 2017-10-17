@@ -22,7 +22,7 @@
 			
 			while ($wp_query->have_posts()) : $wp_query->the_post(); 
 			
-			get_template_part( 'content', get_post_format() );
+			get_template_part( 'content-single', get_post_format() );
 			
 			 		
 			endwhile;
